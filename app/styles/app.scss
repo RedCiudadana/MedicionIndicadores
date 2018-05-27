@@ -1,0 +1,104 @@
+
+@import "ember-bootstrap/bootstrap";
+
+.navbar {    
+    background-color: #202D3E;
+}
+.navbar .navbar-nav .nav-item a{
+    color: white;
+}
+
+.navbar .navbar-brand img{
+    width: 10em;
+    padding-left: 2em;
+}
+
+.footer {
+    background-color: #202D3E;
+    color: white;
+    position: absolute;
+    width: 100%;
+    padding: 1.5em;
+    font-size: 0.8rem;
+}
+
+.footer ul li {
+    font-weight: 200;
+    padding-top: 10px;
+}
+
+.footer span {
+    font-weight: 500;
+    padding-bottom: 30px;
+}
+
+.footer img {
+    width: 15px;
+    margin-right: 5px;
+}
+
+.footer a {
+    text-decoration: none;
+    color: white;
+}
+
+#redCiudananaFooterImg .col-sm-4 {
+    width: 32%;
+    padding-top: 10px;
+}
+
+#redCiudananaFooterImg  {
+    max-height: 6em;
+    width: auto;
+    padding-top: 10px;
+}
+
+/*SECTION - HOME*/
+section{
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+#home {
+    background-color: #38C1D7;
+    color: white;
+}
+
+#home h1{
+    font-weight: bold;
+}
+
+p {
+    font-weight: 200;
+}
+
+.nav-pills {
+    font-size: smaller;
+}
+
+#home  x p {
+  font-weight: 100;
+  font-size: 1.5em;
+}
+/*----*/
+#que-es {
+    color: white;
+    background-color: #E15B5A;
+}
+/*----*/
+#ejes-tematicos img {
+  height: auto;
+  max-width: 6em;
+}
+
+#metas-resumen {
+    padding-top: 2em;
+}
+
+#metas-bar .row {
+    background-color: #202D3E;
+    color: white;
+    height: 8em;
+    margin-top: 2px;
+    padding-top: 2.5em;
+}
