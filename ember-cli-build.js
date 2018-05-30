@@ -11,6 +11,8 @@ module.exports = function(defaults) {
     }
   });
 
+  app.import('bower_components/tabletop/src/tabletop.js');
+  app.import('vendor/shims.js');
   // Use `app.import` to add additional libraries to the generated
   // output files.
   //

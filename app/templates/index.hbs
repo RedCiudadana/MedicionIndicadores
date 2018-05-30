@@ -1,6 +1,11 @@
-{{outlet}}
+<ul>
+  {{#each model as |a|}}
+    <li>{{a.hito}}</li>
+  {{/each}}
+</ul>
+
 {{!--En que medida cumple el gobierno--}}
-<section id="home">
+{{!-- <section id="home">
   <div class="container">
     <div class="row justify-content-center">
         <div class="col-12 col-sm-6">
@@ -40,7 +45,6 @@
         </div>
       </div>
     </div>
-    {{!-- filtros --}}
-    {{!-- EleccionMP Filtrar por tags --}feee
   </div>
 </section>
+ --}}
