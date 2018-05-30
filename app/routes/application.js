@@ -29,7 +29,7 @@ export default Route.extend({
                         reject('Sheet inexistente');
                     }
                     resolve(
-                        data[sheet].elements
+                        this.objectizar(data[sheet].elements)
                         );
                 },
             });
@@ -63,6 +63,8 @@ export default Route.extend({
   },
 
     model() {
-        return this.objectizar(this.getData('hitos'));
+        return RSVP.hash({
+            hitos: this.getData('hitos')
+        });
     }
 });
