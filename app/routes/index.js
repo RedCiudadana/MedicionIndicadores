@@ -39,7 +39,6 @@ export default Route.extend({
   },
 
   model: function() {
-    var application = this.objectizar(this.modelFor('application'));
-    return application.filterBy('tematica', 'Acceso Informacion Publica');
+    return this.modelFor('application');
   }
 });

@@ -4,7 +4,7 @@ import Tabletop from 'tabletop';
 import { isNone } from '@ember/utils';
 import EmberObject from '@ember/object';
 
-var hito = EmberObject.extend({
+var Hito = EmberObject.extend({
     id: '',
     hito: '',
     compromisos: '',
@@ -40,7 +40,29 @@ export default Route.extend({
         });
     },
 
+    objectizar(list) {
+    var resultado = [];
+    for (var i = list.length - 1; i >= 0; i--) {
+      var obj = list[i];
+      var obj2 = Hito.create({
+        id: obj.id,
+        hito: obj.hito,
+        compromisos: obj.compromisos,
+        tematica: obj.tematica,
+        entidad: obj.entidad,
+        categoria: obj.categoria,
+        inicio: obj.inicio,
+        final: obj.final,
+        estado: obj.estado,
+        evaluacion: obj.evaluacion,
+        analisis: obj.analisis
+      });
+      resultado.push(obj2);
+    }
+    return resultado
+  },
+
     model() {
-        return this.getData('hitos');
+        return this.objectizar(this.getData('hitos'));
     }
 });
