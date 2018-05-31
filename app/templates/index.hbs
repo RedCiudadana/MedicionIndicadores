@@ -23,6 +23,7 @@
     </div>
   </div>
 </section>
+
 <section id="compromisos">
   <div class="container">
     {{!-- titulo --}}
@@ -42,3 +43,21 @@
   </div>
 </section>
 
+<section>
+  <h2>Compromisos</h2>
+  <ul>
+    {{#each compromisosFiltradosList as |compromiso|}}
+      <li>{{compromiso}}</li>
+    {{/each}}
+  </ul>
+</section>
+<section>
+  <h2>tematicas</h2>
+  <ul>
+      <li>{{input type="checkbox" checked=transparenciaFiscal}}Transparencia Fiscal</li>
+      <li>{{input type="checkbox" checked=rendicionCuenta}}Rendicion de Cuentas</li>
+      <li>{{input type="checkbox" checked=participacionCiudadana}}Ciudadana</li>
+      <li>{{input type="checkbox" checked=innovacionTecnologica}}Innovacion</li>
+      <li>{{input type="checkbox" checked=accesoInformacionPublica}}Acceso a informacion</li>
+  </ul>
+</section>

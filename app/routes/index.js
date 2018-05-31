@@ -1,17 +1,24 @@
 import Route from '@ember/routing/route';
 
 export default Route.extend({
-  model: function() {
-    // var uniqueObjects = [];
-    // this.modelFor('application')
-    //   .filter(function(item){
-    //     if(!uniqueObjects.isAny('property', item.property)){
-    //     uniqueObjects.push(item);
-    //   }
-    // });
-    // return uniqueObjects;
-    var application = this.modelFor('application')
-      .hitos.uniqBy('tematica');
-    return application;
-  }
+  // model() {
+  //   var hitos = this.modelFor('application').hitos;
+
+  //   var tematicas = hitos
+  //     .uniqBy('tematica')
+  //     .map(function (x) {
+  //       return x.get('tematica');
+  //     });
+
+  //   var compromisos = hitos
+  //     .uniqBy('compromiso')
+  //     .map(function(x) {
+  //       return x.get('compromiso');
+  //     })
+
+  //   return {
+  //     tematicas: tematicas,
+  //     compromisos: compromisos
+  //   };
+  // }
 });
