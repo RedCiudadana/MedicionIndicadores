@@ -14,7 +14,7 @@ var Hito = EmberObject.extend({
   inicio: '',
   final: '',
   estado: '',
-  evaluacion: '',
+  evaluacion: 0,
   analisis: ''
 });
 

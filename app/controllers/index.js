@@ -2,6 +2,7 @@ import Controller from '@ember/controller';
 import { computed } from "@ember/object";
 
 export default Controller.extend({
+
   transparenciaFiscal: true,
 
   rendicionCuenta: true,
@@ -19,7 +20,6 @@ export default Controller.extend({
       .mapBy('tematica');
   }),
 
-
   compromisosFiltradosList: computed(
     'model',
     'transparenciaFiscal',
@@ -29,7 +29,6 @@ export default Controller.extend({
     'accesoInformacionPublica',
     function() {
       return this.get('model')
-        .hitos
         .filter((element) => {
           if (this.get('transparenciaFiscal') && element.tematica == 'Transparencia Fiscal') {
             return true;
@@ -39,10 +38,20 @@ export default Controller.extend({
             return true;
           }
 
+          if (this.get('participacionCiudadana') && element.tematica == 'Participación Ciudadana') {
+            return true;
+          }
+
+          if (this.get('innovacionTecnologica') && element.tematica == 'Innovación Tecnológica') {
+            return true;
+          }
+
+          if (this.get('accesoInformacionPublica') && element.tematica == 'Acceso Informacion Publica') {
+            return true;
+          }
+
           return false;
         })
-        .uniqBy('compromiso')
-        .mapBy('compromiso');
     }
   )
 });
