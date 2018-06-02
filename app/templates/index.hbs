@@ -41,25 +41,31 @@
         </div>
       </div>
       {{!-- filtros --}}
-      <h2>tematicas</h2>
-      <ul>
-          <li>{{input type="checkbox" checked=transparenciaFiscal}}Transparencia Fiscal</li>
-          <li>{{input type="checkbox" checked=rendicionCuenta}}Rendicion de Cuentas</li>
-          <li>{{input type="checkbox" checked=participacionCiudadana}}Ciudadana</li>
-          <li>{{input type="checkbox" checked=innovacionTecnologica}}Innovacion</li>
-          <li>{{input type="checkbox" checked=accesoInformacionPublica}}Acceso a informacion</li>
-      </ul>
+      <div id="filtros" class="my-4">
+        <span>Filtros: </span>
+        {{input type="checkbox" checked=transparenciaFiscal}}
+        <span>Transparencia Fiscal</span>
+        {{input type="checkbox" checked=rendicionCuenta}}
+        <span>Rendicion de Cuentas</span>
+        {{input type="checkbox" checked=participacionCiudadana}}
+        <span>Participación Ciudadana</span>
+        {{input type="checkbox" checked=innovacionTecnologica}}
+        <span>Innovacion Tecnológica</span>
+        {{input type="checkbox" checked=accesoInformacionPublica}}
+        <span>Acceso a informacion publica</span>
+      </div>
     </div>
-  </div>
-</section>
-<section id="compromisos">
-  <div class="container">
+
     <div class="row">
         {{#each compromisosFiltradosList as |compromiso|}}
-          <div class="col-12 col-md-4">
-            {{compromiso.compromiso}}
+          <div class="col-12 col-md-4 px-2 text-center">
+            <div class="compromiso p-4">
+              <p class="text-truncate">{{compromiso.compromiso}}</p>
+              <img src="/img/{{compromiso.image}}" alt="{{compromiso.tematica}}" width="30%">
+              <p class="my-4">{{compromiso.porcentaje}}% de Avance</p>
+            </div>
           </div>
         {{/each}}
-    </div>
+      </div>
   </div>
 </section>

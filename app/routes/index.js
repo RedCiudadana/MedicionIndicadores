@@ -20,12 +20,13 @@ export default Route.extend({
         sum +=  parseInt(element.evaluacion);
     });
 
-    sum = sum/hitosCompromisos.length;
+    sum = Math.trunc(sum/hitosCompromisos.length);
 
     compromisos.push(Compromisos.create({
       compromiso: nombresCompromisos[i],
       porcentaje: sum,
-      tematica: hitosCompromisos.get('firstObject').get('tematica')
+      tematica: hitosCompromisos.get('firstObject').get('tematica'),
+      image: hitosCompromisos.get('firstObject').get('tematica').dasherize().normalize('NFD').replace(/[\u0300-\u036f]/g, "") + ".png"
     }));
     }
     return compromisos;
