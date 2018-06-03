@@ -8,11 +8,10 @@ module.exports = function(defaults) {
       'bootstrapVersion': 4,
       'importBootstrapFont': false,
       'importBootstrapCSS': false
-    }
-  //   , 
-  //   'fingerprint': {
-  //   exclude: ['img/*.png'],
-  // }
+    }, 
+    'fingerprint': {
+    exclude: ['img/*.png'],
+  }
   });
 
   app.import('bower_components/tabletop/src/tabletop.js');
