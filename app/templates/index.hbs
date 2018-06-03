@@ -41,18 +41,28 @@
         </div>
       </div>
       {{!-- filtros --}}
-      <div id="filtros" class="my-4">
-        <span>Filtros: </span>
-        {{input type="checkbox" checked=transparenciaFiscal}}
-        <span>Transparencia Fiscal</span>
-        {{input type="checkbox" checked=rendicionCuenta}}
-        <span>Rendicion de Cuentas</span>
-        {{input type="checkbox" checked=participacionCiudadana}}
-        <span>Participación Ciudadana</span>
-        {{input type="checkbox" checked=innovacionTecnologica}}
-        <span>Innovacion Tecnológica</span>
-        {{input type="checkbox" checked=accesoInformacionPublica}}
-        <span>Acceso a informacion publica</span>
+      <div id="filtros" class="my-4 row">
+        <strong class="m-auto">Filtrar por: </strong>
+        <div class="col-12 col-md-2" style="display: flex;">
+          {{input type="checkbox" checked=transparenciaFiscal}}
+          <p class="ml-2 my-auto py-auto">Transparencia Fiscal</p>
+        </div>
+        <div class="col-12 col-md-2" style="display: flex;">
+          {{input type="checkbox" checked=rendicionCuenta}}
+          <p class="ml-2 my-auto py-auto">Rendicion de Cuentas</p>
+        </div>
+        <div class="col-12 col-md-2" style="display: flex;">
+          {{input type="checkbox" checked=participacionCiudadana}}
+          <p class="ml-2 my-auto py-auto">Participación Ciudadana</p>
+        </div>
+        <div class="col-12 col-md-2" style="display: flex;">
+          {{input type="checkbox" checked=innovacionTecnologica}}
+          <p class="ml-2 my-auto py-auto">Innovacion Tecnológica</p>
+        </div>
+        <div class="col-12 col-md-2" style="display: flex;">
+          {{input type="checkbox" checked=accesoInformacionPublica}}
+          <p class="ml-2 my-auto py-auto">Acceso a informacion publica</p>
+        </div>
       </div>
     </div>
 
