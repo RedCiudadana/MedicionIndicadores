@@ -10,7 +10,7 @@ module.exports = function(defaults) {
       'importBootstrapCSS': false
     }, 
     'fingerprint': {
-    exclude: ['assets/images/**/*.png'],
+    exclude: ['img/*.png'],
   }
   });
 
