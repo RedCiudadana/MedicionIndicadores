@@ -2,9 +2,9 @@
   "name": "foo",
   "version": "0.0.0",
   "private": true,
-  "description": "Small description for foo goes here",
+  "description": "Proyecto de medición de avances de los planes de gobierno.",
   "license": "MIT",
-  "author": "",
+  "author": "red ciudadana",
   "directories": {
     "doc": "doc",
     "test": "tests"
