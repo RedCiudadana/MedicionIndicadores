@@ -1,0 +1,76 @@
+<section class="compromise-header">
+  <div class="container">
+    <div class="row">
+      <div class="col-8 text-center">
+        <h2>{{model.compromiso.compromiso}}</h2>
+        <button type="button" class="btn btn-primary">
+          Tematica: <strong class="text-white">{{model.compromiso.tematica}}</strong>
+          <span class="sr-only"></span>
+        </button>
+      </div>
+      <div class="col-4 text-center">
+        <canvas id="myCanvas" width="500" height="200" porcentaje="{{model.compromiso.porcentaje}}"></canvas>
+        <script>
+            var canvas = document.getElementById('myCanvas');
+            var context = canvas.getContext('2d');
+            var al=0;
+            var start=1.72;
+            var cw=context.canvas.width/3;
+            var ch=context.canvas.height/3;
+            var diff;
+            var porcentaje=document.getElementById('myCanvas').getAttribute('porcentaje');
+             
+            function progressBar(){
+            diff=(al/100)*Math.PI*2;
+            context.clearRect(0,0,400,200);
+            context.beginPath();
+            context.arc(cw,ch,50,0,2*Math.PI,false);
+            context.fillStyle='#FFF';
+            context.fill();
+            context.strokeStyle='#ffffff';
+            context.stroke();
+            context.fillStyle='#000';
+            context.strokeStyle='#E15B5A';
+            context.textAlign='center';
+            context.lineWidth=30;
+            context.font = '15pt Arial';
+            context.beginPath();
+            context.arc(cw,ch,80,start,diff+start,false);
+            context.stroke();
+            context.fillText(al+'%',cw+2,ch+6);
+            if(al>=porcentaje){
+            clearTimeout(bar);
+            }
+             
+            al++;
+            }
+             
+            var bar=setInterval(progressBar,50);
+        </script>
+        <h6>Cumplimiento total</h6>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <div class="row justify-content-center text-center" id="metas-resumen">
+            <div class="col border-right border-dark">
+                <p>No. de metas propuestas</p>
+                <h4>12</h4>
+            </div>
+            <div class="col border-right border-dark">
+                <p>Metas atrasadas</p>
+                <h4>13</h4>
+            </div>
+            <div class="col border-right border-dark">
+                <p>Metas en proceso</p>
+                <h4>1</h4>
+            </div>
+            <div class="col">
+                <p>Metas completadas</p>
+                <h4>123</h4>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

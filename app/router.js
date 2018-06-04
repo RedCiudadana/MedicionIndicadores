@@ -8,7 +8,10 @@ const Router = EmberRouter.extend({
 
 Router.map(function() {
   this.route('about');
-  this.route('compromises');
+  this.route('compromises', function() {
+    this.route('index', { path: '/'});
+    this.route('compromiso', {path: '/:compromiso_id'});
+  });
   this.route('methodology');
 });
 

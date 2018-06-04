@@ -2,7 +2,6 @@ import Route from '@ember/routing/route';
 import EmberObject from '@ember/object';
 
 var Compromisos = EmberObject.extend({
-  id: 0,
   compromiso: '',
   porcentaje: '',
   tematica: 0
@@ -24,7 +23,6 @@ export default Route.extend({
     sum = Math.trunc(sum/hitosCompromisos.length);
 
     compromisos.push(Compromisos.create({
-      id: nombresCompromisos.length - i -1,
       compromiso: nombresCompromisos[i],
       porcentaje: sum,
       tematica: hitosCompromisos.get('firstObject').get('tematica'),
