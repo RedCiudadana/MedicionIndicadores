@@ -1,15 +1,15 @@
 <section class="compromise-header">
   <div class="container">
     <div class="row">
-      <div class="col-8 text-center">
+      <div class="col-12 col-md-8 text-center">
         <h2>{{model.compromiso.compromiso}}</h2>
         <button type="button" class="btn btn-primary">
           Tematica:&nbsp;&nbsp;&nbsp;<strong class="text-white">{{model.compromiso.tematica}}</strong>
           <span class="sr-only"></span>
         </button>
       </div>
-      <div class="col-4 text-center">
-        <canvas id="myCanvas" width="500" height="200" porcentaje="{{model.compromiso.porcentaje}}"></canvas>
+      <div class="col-12 col-md-4 text-center">
+        <canvas id="myCanvas" width="500" height="200" porcentaje="{{model.compromiso.porcentaje}}" class="mx-auto my-auto"></canvas>
         <script>
             var canvas = document.getElementById('myCanvas');
             var context = canvas.getContext('2d');

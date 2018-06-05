@@ -73,8 +73,8 @@
               <p class="text-truncate">{{compromiso.compromiso}}</p>
               <img src="/img/{{compromiso.image}}" alt="{{compromiso.tematica}}" width="30%">
               <p class="my-4">{{compromiso.porcentaje}}% de Avance</p>
+              {{link-to 'Ver más' 'compromises.compromiso' compromiso.id}}
             </div>
-            {{link-to 'Ver más' 'compromises.compromiso' compromiso.id}}
           </div>
         {{/each}}
       </div>
