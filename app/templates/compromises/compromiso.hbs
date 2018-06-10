@@ -3,20 +3,26 @@
     <div class="row">
       <div class="col-12 col-md-8 text-center">
         <h2>{{model.compromiso.compromiso}}</h2>
-        <button type="button" class="btn btn-primary">
+        <button type="button" class="btn" style="background-color: #E15B5A;">
           Tematica:&nbsp;&nbsp;&nbsp;<strong class="text-white">{{model.compromiso.tematica}}</strong>
           <span class="sr-only"></span>
         </button>
+        {{#each model.hitosDeCompromiso as |hito|}}
+          <button type="button" class="btn m-2" style="background-color: #38C1D7;">
+            Entidad:&nbsp;&nbsp;&nbsp;<strong class="text-white">{{hito.entidad}}</strong>
+            <span class="sr-only"></span>
+          </button>
+        {{/each}}
       </div>
       <div class="col-12 col-md-4 text-center">
-        <canvas id="myCanvas" width="500" height="200" porcentaje="{{model.compromiso.porcentaje}}" class="mx-auto my-auto"></canvas>
+        <canvas id="myCanvas" width="250" height="200" porcentaje="{{model.compromiso.porcentaje}}" class="mx-auto my-auto"></canvas>
         <script>
             var canvas = document.getElementById('myCanvas');
             var context = canvas.getContext('2d');
             var al=0;
             var start=1.72;
-            var cw=context.canvas.width/3;
-            var ch=context.canvas.height/3;
+            var cw=context.canvas.width/2;
+            var ch=context.canvas.height/2;
             var diff;
             var porcentaje=document.getElementById('myCanvas').getAttribute('porcentaje');
              
@@ -50,7 +56,7 @@
         <h6>Cumplimiento total</h6>
       </div>
     </div>
-    <div class="row">
+    <div class="row m-5">
       <div class="col-12">
         <div class="row justify-content-center text-center" id="metas-resumen">
             <div class="col border-right border-dark">
