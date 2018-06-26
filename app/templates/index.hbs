@@ -70,7 +70,7 @@
         {{#each compromisosFiltradosList as |compromiso|}}
           <div class="col-12 col-md-4 px-2 text-center">
             <div class="compromiso p-4">
-              <p class="text-truncate">{{compromiso.compromiso}}</p>
+              <p>{{aumentouno compromiso.id}} - {{compromiso.compromiso}}</p>
               <img src="/img/{{compromiso.image}}" alt="{{compromiso.tematica}}" width="30%">
               <p class="my-4">{{compromiso.porcentaje}}% de Avance</p>
               {{link-to 'Ver más' 'compromises.compromiso' compromiso.id}}

@@ -64,7 +64,8 @@ export default Route.extend({
 
   model() {
     return RSVP.hash({
-      hitos: this.getData('hitos')
+      hitos: this.getData('hitos'),
+      config: 1
     });
   }
 });
