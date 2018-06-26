@@ -7,12 +7,10 @@
           Tematica:&nbsp;&nbsp;&nbsp;<strong class="text-white">{{model.compromiso.tematica}}</strong>
           <span class="sr-only"></span>
         </button>
-        {{#each model.hitosDeCompromiso as |hito|}}
           <button type="button" class="btn m-2" style="background-color: #38C1D7;">
-            Entidad:&nbsp;&nbsp;&nbsp;<strong class="text-white">{{hito.entidad}}</strong>
+            Entidad:&nbsp;&nbsp;&nbsp;<strong class="text-white">{{model.hitosDeCompromiso.firstObject.entidad}}</strong>
             <span class="sr-only"></span>
           </button>
-        {{/each}}
       </div>
       <div class="col-12 col-md-4 text-center">
         <canvas id="myCanvas" width="250" height="200" porcentaje="{{model.compromiso.porcentaje}}" class="mx-auto my-auto"></canvas>
