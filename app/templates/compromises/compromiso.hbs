@@ -77,26 +77,28 @@
     </div>
     <div class="row">
       {{#each model.hitosDeCompromiso as |hito|}}
-        <table class="table my-5">
-          <thead class="thead-color">
-            <tr>
-              <th scope="col">Nombre del hito</th>
-              <th scope="col">Inicio</th>
-              <th scope="col">Final</th>
-              <th scope="col">Estado</th>
-              <th scope="col">Evaluación</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>{{hito.hito}}</td>
-              <td>{{hito.inicio}}</td>
-              <td>{{hito.final}}</td>
-              <td>{{hito.estado}}</td>
-              <td>{{hito.analisis}}</td>
-            </tr>
-          </tbody>
-        </table>
+        <div class="col-12">
+          <table class="my-2">
+            <thead class="thead-color">
+              <tr>
+                <th scope="col">Nombre del hito</th>
+                <th scope="col">Inicio</th>
+                <th scope="col">Final</th>
+                <th scope="col">Estado</th>
+                <th scope="col">Evaluación</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>{{hito.hito}}</td>
+                <td>{{hito.inicio}}</td>
+                <td>{{hito.final}}</td>
+                <td>{{hito.estado}}</td>
+                <td>{{hito.analisis}}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       {{/each}}
     </div>
   </div>
