@@ -75,31 +75,40 @@
         </div>
       </div>
     </div>
-    <div class="row">
-      {{#each model.hitosDeCompromiso as |hito|}}
-        <div class="col-12">
-          <table class="my-2">
-            <thead class="thead-color">
-              <tr>
-                <th scope="col">Nombre del hito</th>
-                <th scope="col">Inicio</th>
-                <th scope="col">Final</th>
-                <th scope="col">Estado</th>
-                <th scope="col">Evaluación</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>{{hito.hito}}</td>
-                <td>{{hito.inicio}}</td>
-                <td>{{hito.final}}</td>
-                <td>{{hito.estado}}</td>
-                <td>{{hito.analisis}}</td>
-              </tr>
-            </tbody>
+
+    {{#each model.hitosDeCompromiso as |hito|}}
+      <div class="row my-5 mx-2 border border-dark">
+        <div class="col-12 col-lg-8 p-0">
+          <table class="table">
+            <thead class="thead-color"><tr><th>Nombre del hito</th></tr></thead>
+            <tbody><tr><td>{{hito.hito}}</td></tr></tbody>
           </table>
         </div>
-      {{/each}}
-    </div>
+        <div class="col-12 col-lg-1 p-0">
+          <table class="table">
+            <thead class="thead-color"><tr><th>Inicio</th></tr></thead>
+            <tbody><tr><td>{{hito.inicio}}</td></tr></tbody>
+          </table>
+        </div>
+        <div class="col-12 col-lg-1 p-0">
+          <table class="table">
+            <thead class="thead-color"><tr><th>Final</th></tr></thead>
+            <tbody><tr><td>{{hito.final}}</td></tr></tbody>
+          </table>
+        </div>
+        <div class="col-12 col-lg-1 p-0">
+          <table class="table">
+            <thead class="thead-color"><tr><th>Estado</th></tr></thead>
+            <tbody><tr><td>{{hito.estado}}</td></tr></tbody>
+          </table>
+        </div>
+        <div class="col-12 col-lg-1 p-0">
+          <table class="table">
+            <thead class="thead-color"><tr><th>Analisis</th></tr></thead>
+            <tbody><tr><td>{{hito.analisis}}</td></tr></tbody>
+          </table>
+        </div>
+      </div>
+    {{/each}}
   </div>
 </section>
