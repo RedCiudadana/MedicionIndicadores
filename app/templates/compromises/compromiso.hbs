@@ -18,7 +18,7 @@
             var canvas = document.getElementById('myCanvas');
             var context = canvas.getContext('2d');
             var al=0;
-            var start=1.72;
+            var start=1.5;
             var cw=context.canvas.width/2;
             var ch=context.canvas.height/2;
             var diff;
@@ -27,25 +27,24 @@
             function progressBar(){
             diff=(al/100)*Math.PI*2;
             context.clearRect(0,0,400,200);
-            context.beginPath();
-            context.arc(cw,ch,50,0,2*Math.PI,false);
-            context.fillStyle='#FFF';
-            context.fill();
-            context.strokeStyle='#ffffff';
-            context.stroke();
-            context.fillStyle='#000';
             context.strokeStyle='#E15B5A';
             context.textAlign='center';
             context.lineWidth=30;
             context.font = '15pt Arial';
+
             context.beginPath();
             context.arc(cw,ch,80,start,diff+start,false);
             context.stroke();
+
+            context.beginPath();
+            context.strokeStyle='#cecece';
+            context.arc(cw,ch,80,diff+start, 0.5*Math.PI,false);
+            context.stroke();
+
             context.fillText(al+'%',cw+2,ch+6);
             if(al>=porcentaje){
-            clearTimeout(bar);
+              clearTimeout(bar);
             }
-             
             al++;
             }
              
@@ -63,11 +62,11 @@
             </div>
             <div class="col border-right border-dark">
                 <p>Metas atrasadas</p>
-                <h4>{{model.informacionCompromiso.metasAtrasadas}}</h4>
+                <h4>{{model.informacionCompromiso.metasProceso}}</h4>
             </div>
             <div class="col border-right border-dark">
                 <p>Metas en proceso</p>
-                <h4>{{model.informacionCompromiso.metasProceso}}</h4>
+                <h4>0</h4>
             </div>
             <div class="col">
                 <p>Metas completadas</p>
