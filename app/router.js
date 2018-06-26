@@ -3,7 +3,14 @@ import config from './config/environment';
 
 const Router = EmberRouter.extend({
   location: config.locationType,
-  rootURL: config.rootURL
+  rootURL: config.rootURL,
+
+  // Reset Scroll
+  didTransition() {
+    this._super(...arguments);
+    window.scrollTo(0, 0);
+  }
+
 });
 
 Router.map(function() {
