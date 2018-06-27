@@ -13,6 +13,7 @@ export default Route.extend({
     return {
       compromiso: compromiso,
       hitosDeCompromiso: hitosDeCompromiso,
+      textoTwitter: 'Conoce todo sobre el compromiso de '+ compromiso.compromiso,
       informacionCompromiso: {
         noMetas: noMetas,
         metasAtrasadas: metasAtrasadas,
