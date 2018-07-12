@@ -11,6 +11,11 @@
           Entidad:&nbsp;&nbsp;&nbsp;<strong class="text-white">{{model.hitosDeCompromiso.firstObject.entidad}}</strong>
           <span class="sr-only"></span>
         </button>
+        {{#link-to 'compromises.compromiso.assess' model.compromiso.id}}
+        <button type="button" class="btn m-2 btn-primary">
+          Valorar compromiso
+        </button>
+        {{/link-to}}
         <div class="d-inline-flex social-media" style="float:right; padding-top: 20px;">
         {{twitter-share
             count='horizontal'

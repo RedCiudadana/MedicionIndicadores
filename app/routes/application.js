@@ -15,7 +15,9 @@ var Hito = EmberObject.extend({
   final: '',
   estado: '',
   evaluacion: 0,
-  analisis: ''
+  analisis: '',
+  embed: '',
+  _form: ''
 });
 
 export default Route.extend({
@@ -55,7 +57,9 @@ export default Route.extend({
         final: obj.final,
         estado: obj.estado,
         evaluacion: obj.evaluacion,
-        analisis: obj.analisis
+        analisis: obj.analisis,
+        embed: obj.embed,
+        _form: obj._form
       });
       resultado.push(obj2);
     }

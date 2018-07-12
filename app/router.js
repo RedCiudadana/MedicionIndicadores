@@ -17,7 +17,10 @@ Router.map(function() {
   this.route('about');
   this.route('compromises', function() {
     this.route('index', { path: '/'});
-    this.route('compromiso', {path: '/:compromiso_id'});
+    this.route('compromiso', function() {
+      this.route('general', {path: '/:compromiso_id'});
+      this.route('assess', {path: '/assess/:id'});
+    })
   });
   this.route('methodology');
 });

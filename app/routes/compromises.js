@@ -5,7 +5,9 @@ var Compromisos = EmberObject.extend({
   id: 0,
   compromiso: '',
   porcentaje: '',
-  tematica: 0
+  tematica: 0,
+  embed: '',
+  _form: ''
 });
 
 export default Route.extend({
@@ -28,6 +30,8 @@ export default Route.extend({
       compromiso: nombresCompromisos[i],
       porcentaje: sum,
       tematica: hitosCompromisos.get('firstObject').get('tematica'),
+      embed: hitosCompromisos.get('firstObject').get('embed'),
+      _form: hitosCompromisos.get('firstObject').get('_form'),
       image: hitosCompromisos.get('firstObject').get('tematica').dasherize().normalize('NFD').replace(/[\u0300-\u036f]/g, "") + ".png"
     }));
     }
